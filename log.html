@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://cdn4.cdn-telegram.org/file/GK6VvE7T224q_29xSf-OB7wkbQbaWpslbc4Xkn4wBJvZ4bF_KyCdmUBK87j1i8H-VMPqvWY7rZMTJ4OeSgo2E_HSi09BCbORe9dCPkIIAberT86XPqcZcN9Cbywh36A6v9eKR4lIscb_Bs3S3VqpDGs9MeJifdGSB8s-f488is9ulajheRmK_m8VCghxXiKC5FMpx9I-duw3Q4ZjnljvxxJSFzIe-Ff_QAd2NjMxkOOAyxS14c4DT2kvqKsylRXYC53Gkgn8KtFrU4LyGs9YHIf2fOidV-qz-4c6WiG6g8-7Vv0hFzWSQJIO6b3lO_YQ7JEqI2YTpto1Y4l-S1X77w.jpg" type="image/jpg">
+    
+    <title>Log</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.animated-div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(89, 115, 217);
+    position: absolute;
+    
+}
+.qqq{
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit;
+}
+.qqq1{
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(to right, #a32b2b, #255697);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 50vh;
+    height: 60vh;
+    border-radius: 3vh;
+    background: #525fa0;
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 10px 20px rgba(57, 65, 114, 0.2),
+    10px 10px 20px rgba(57, 65, 114, 0.2);
+}
+
+.top{
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.top span{
+    position: relative;
+    top: 3vh;
+    font-size: 25px;
+    letter-spacing: 0.2vh;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(134, 134, 134);
+}
+
+.inputBox{
+    box-shadow: rgb(219, 219, 219) 3px 3px 6px 0px inset,
+    rgba(221, 220, 220, 0.5) -3px -3px 6px 1px inset;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4.5vh;
+    width: 40vh;
+    height: 6vh;
+    margin-bottom: 4vh;
+    border-radius: 5vh;
+}
+
+.inputBox:focus-within{
+    box-shadow: 10px 10px 20px #fff(0, 0, 0, 0.1),
+    -5px -5px 10px rgba(255, 255, 255, 0.5);
+    outline: 0.5vh solid #fff;
+}
+
+.input{
+    height: 4vh;
+    width: 30vh;
+    margin-left:-2vh ;
+    border: none;
+    outline: none;
+    background: inherit;
+}
+body{
+    background-color: #0122c6;
+}
+.input::placeholder{
+    color: #fff;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+}
+
+.btn{
+    margin-top: 2vh;
+    height: 5vh;
+    width: 10vh;
+    border: none;
+    border-radius: 5vh;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.btn:hover{
+    background: #25252b;
+    color: #fff;
+}
+
+form{
+    text-align: center;
+}
+
+.user{
+     margin-top: 3vh;
+     color: #fff;
+}
+
+.user span{
+    margin-left: 1vh;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* <!-- --------------------------- back ---------------------------------- --> */
+
+.inputBoxBack{
+    height: 6vh;
+    margin-bottom: 2vh;
+}
+
+.topBack{
+    margin-bottom: 6vh;
+}
+
+.btnBack{
+    margin-top: 0vh;
+    height: 5vh;
+    width: 10vh;
+    font-size: 2vh;
+}
+
+.front{
+    position: absolute;
+    z-index: 2;
+    transition: 2s ease;
+}
+
+.back{
+    position: absolute;
+    transition: 2s ease;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+    </style>
+</head>
+<body>
+    <div class="animated-div"></div>
+    <script>
+    const animatedDiv = document.querySelector('.animated-div');
+
+    function animate() {
+        animatedDiv.style.transform = 'translateX(200px)';
+        animatedDiv.style.transition = 'transform 1s ease-in-out';
+
+        setTimeout(() => {
+            animatedDiv.style.transform = 'translateX(0)';
+        }, 1000);
+    }
+
+    animate(); // Запускаем анимацию при загрузке страницы
+    </script>
+    <div class="container front">
+        <div class="top">
+            <span>InnoTech</span>
+        </div>
+        <div class="form">
+            <form>
+                <div class="inputBox inputBoxFront">
+                    <label><i class="fa-solid fa-user"></i></label>
+                    <input type="text" placeholder="Username" class="input" required>
+                </div>
+                <div class="inputBox inputBoxFront">
+                    <label><i class="fa-solid fa-lock"></i></label>
+                    <input type="password" placeholder="Password" class="input" required>
+                </div>
+                <button type="submit" class="btn"><a class="qqq" href="index.html">Log in</a></button>
+                <div class="user">Впервые тут? <span class="newUser">Зарегаться</span></div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container back">
+        <div class="top topBack">
+            <span>InnoTech</span>
+        </div>
+        <div class="form formBack">
+            <form>
+                <div class="inputBox inputBoxBack">
+                    <label><i class="fa-solid fa-t"></i></label>
+                    <input type="text" placeholder="Name" class="input" required>
+                </div>
+                <div class="inputBox inputBoxBack">
+                    <label><i class="fa-solid fa-envelope"></i></label>
+                    <input type="email" placeholder="Email id" class="input" required>
+                </div>
+                <div class="inputBox inputBoxBack">
+                    <label><i class="fa-solid fa-user"></i></label>
+                    <input type="text" placeholder="Username" class="input" required>
+                </div>
+                <div class="inputBox inputBoxback">
+                    <label><i class="fa-solid fa-lock"></i></label>
+                    <input type="password" placeholder="Password" class="input" required>
+                </div>
+                <button type="submit" class="btn btnBack"><a class="qqq1" href="index.html">Sign up</a></button>
+                <div class="user userBack">Уже были тут? <span class="existingUser">Войти</span></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let front = document.querySelector('.front');
+        let back = document.querySelector('.back');
+
+        let newUser = document.querySelector('.newUser');
+        let existingUser = document.querySelector('.existingUser');
+
+        newUser.addEventListener('click', function(){
+            front.style.zIndex = "1"
+            back.style.zIndex = "2"
+            front.style.transform = "rotateY(180deg)"
+            back.style.transform = "rotateY(0deg)"
+        })
+
+        existingUser.addEventListener('click', function(){
+            back.style.zIndex = "1"
+            front.style.zIndex = "2"
+            back.style.transform = "rotateY(180deg)"
+            front.style.transform = "rotateY(0deg)"
+        })
+    </script>
+</body>
+</html>
